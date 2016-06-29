@@ -1,7 +1,17 @@
-# Network
-基于AFNetWorking的二次封装
+//
+//  HttpWrapper.h
+//  Network
+//
+//  Created by metthew on 15/5/6.
+//  Copyright (c) 2015年 metthew. All rights reserved.
+//
 
-```
+#import <Foundation/Foundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "AFHTTPRequestOperationManager.h"
+
+@interface HTTPWrapper : NSObject
+
 /**
  *  HTTP post方式请求
  *
@@ -127,4 +137,11 @@
  *  @return 
  */
 + (BOOL)isNetWorkError:(NSError *)error;
-```
+
+//建立文件夹
+//dirPath  文件夹创建位置
+//1:Document  应用程序数据文件   用于存储用户数据或其它应该定期备份的信息。
+//2.cache 存放应用程序专用的支持文件，保存应用程序再次启动过程中需要的信息。
+//3.tmp 用于存放临时文件，保存应用程序再次启动过程中不需要的信息。
+-(NSString *) createDir:(NSString *)dirName dirPath:(NSInteger)dirPath;
+@end
