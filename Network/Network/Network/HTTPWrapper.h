@@ -118,7 +118,7 @@
 - (void)postUploadWithUrl:(NSString *)urlStr fileUrl:(NSURL *)fileURL reqParms:(NSMutableDictionary *)dict success:(void (^)(id responseObject))success fail:(void (^)())fail;
 
 /**
- * 获取XML数据 (不会用到token)
+ * 获取XML数据
  */
 - (AFHTTPRequestOperationManager *)XMLDataWithUrl:(NSString *)url
                                          reqParms:(NSMutableDictionary *)dict
